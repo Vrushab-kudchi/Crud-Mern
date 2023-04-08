@@ -8,7 +8,7 @@ export default function Table() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/user')
+    axios.get('/user')
       .then(response => {
         setData(response.data);
         console.log(data)
@@ -19,7 +19,7 @@ export default function Table() {
   }, []);
 
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:3001/delete/${id}`)
+    axios.delete(`/delete/${id}`)
       .then(response => {
         console.log('User deleted:', response.data);
         toast.success("User Deleted");

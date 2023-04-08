@@ -24,7 +24,7 @@ export default function EditForm() {
       toast.error('Fill all fields');
     } else {
       axios
-        .patch(`http://localhost:3001/update/${id}`, formData)
+        .patch(`/update/${id}`, formData)
         .then(function (response) {
           toast.success('User updated successfully');
           setTimeout(() => {

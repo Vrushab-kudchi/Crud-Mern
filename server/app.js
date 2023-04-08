@@ -12,7 +12,7 @@ app.use(bodyParser.json())
 app.use('/', Router);
 
 
-
-app.listen(3001, () => {
-    console.log("http://localhost:3001")
+//Vps IP
+app.listen(3001, '185.210.144.13', () => {
+    console.log("http://185.210.144.13:3001")
 })
