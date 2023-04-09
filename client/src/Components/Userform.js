@@ -18,7 +18,7 @@ export default function Userform() {
 
 function submituser() {
   axios
-    .post('/register', formData)
+    .post('http://185.210.144.13:3001/register', formData)
     .then(function (response) {
       toast.success('User created successfully');
        setTimeout(() => {
